@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  /* 默认3px  */
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  /* a标签的字体颜色 继承 */
+  color: inherit;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+i {
+  font-style: normal;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}

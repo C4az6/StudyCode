@@ -1,0 +1,291 @@
+header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 40px;
+  background-color: #c91523;
+  z-index: 2;
+}
+header .logo {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .logo i {
+  width: 60px;
+  height: 22px;
+  background: url('../images/jd-sprites.png');
+  background-size: 200px 200px;
+  background-position: 0 -110px;
+}
+header .login {
+  width: 50px;
+  background-color: #c91523;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .search {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  padding: 5px 0;
+}
+header .search::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  background: url('../images/jd-sprites.png');
+  /* 精灵图一般都要缩小2倍 */
+  background-size: 200px 200px;
+  background-position: -60px -110px;
+}
+header .search input {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  padding-left: 35px;
+}
+/* 首页导航部分 start */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav a {
+  width: 25%;
+  padding: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+nav a img {
+  width: 50%;
+  display: inline-block;
+}
+/* 首页导航部分 end */
+/* 掌上秒杀部分 start */
+.hand-kill-wrap .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.hand-kill-wrap .title p {
+  font-size: 14px;
+  color: red;
+}
+.hand-kill-wrap .title .time span {
+  background-color: #000;
+  color: #fff;
+}
+.hand-kill-wrap .title .time span:nth-child(3n) {
+  background-color: #fff;
+  color: #000000;
+}
+.hand-kill-wrap .title > a {
+  font-size: 14px;
+  color: #000;
+}
+.hand-kill-wrap .content {
+  display: flex;
+  justify-content: space-around;
+}
+.hand-kill-wrap .content a {
+  position: relative;
+  text-align: center;
+}
+.hand-kill-wrap .content a span {
+  position: absolute;
+  top: 36%;
+  left: 58%;
+  padding: 4px 8px;
+  background-color: red;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 14px;
+}
+.hand-kill-wrap .content p {
+  color: red;
+}
+/* 掌上秒杀部分 end */
+/* 618活动部分 start */
+.activity-festival .fest-title {
+  position: relative;
+}
+.activity-festival .fest-title .img-wrap {
+  position: absolute;
+  /* 块级元素加了绝对定位或者固定定位之后,宽度就会变成由自身内容撑开了
+        因此屏幕放大后，可能会导致图片没有跟着屏幕一起放大的bug，因此要加上width:100%;
+      */
+  width: 100%;
+  bottom: 5px;
+  left: 0;
+}
+.activity-festival .fest-title .img-wrap a {
+  float: left;
+  width: 50%;
+}
+.activity-festival .fest-content {
+  /* flex方式实现 */
+  /* 浮动方式实现 */
+}
+.activity-festival .fest-content a {
+  float: left;
+}
+.activity-festival .fest-content a:nth-child(-n+3) {
+  width: 33.33%;
+}
+.activity-festival .fest-content a:nth-last-child(-n+4) {
+  width: 50%;
+}
+/* 618活动部分 end */
+/* 公共标题部分 */
+.title {
+  color: red;
+}
+/* 特色超市部分 start */
+.market-wrap .market-content a {
+  float: left;
+  width: 50%;
+}
+.market-wrap .market-content a:nth-child(3) {
+  padding-bottom: 1px;
+}
+/* 特色超市部分 end */
+/* 主题街部分 start */
+.theme-wrap .theme-content a {
+  float: left;
+  width: 25%;
+}
+.theme-wrap .theme-content a:nth-child(-n+2) {
+  width: 50%;
+}
+.theme-wrap .theme-content a:nth-child(2) {
+  padding-bottom: 1px;
+}
+/* 主题街部分 end */
+/* 品牌推荐部分 start */
+.brand-wrap .brand-content {
+  display: flex;
+}
+.brand-wrap .brand-content a:first-child {
+  flex: 4;
+}
+.brand-wrap .brand-content a:nth-last-child(-n+2) {
+  flex: 3;
+}
+/* 品牌推荐部分 end */
+/* 猜你喜欢部分start */
+.guess-wrap .guess-title {
+  display: flex;
+  justify-content: space-between;
+}
+.guess-wrap .guess-title > span {
+  color: red;
+  font-size: 16px;
+}
+.guess-wrap .guess-title a {
+  color: red;
+}
+.guess-wrap .guess-title a img {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+.guess-wrap .product-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.guess-wrap .product-content .product-item {
+  width: 50%;
+}
+.guess-wrap .product-content .product-item .similarity {
+  display: flex;
+  justify-content: space-between;
+}
+.guess-wrap .product-content .product-item .similarity > span {
+  color: red;
+}
+.guess-wrap .product-content .product-item .similarity > a {
+  color: #666666;
+  border: 1px solid #000;
+}
+.guess-wrap .product-content .product-item .product-info img {
+  width: 80%;
+  margin: 0 auto;
+}
+.guess-wrap .product-content .product-item .product-info p {
+  border-bottom: 1px solid #000;
+}
+/* 猜你喜欢部分end */
+/* 底部工具栏 start */
+.bottom-tools {
+  text-align: center;
+}
+.bottom-tools .more,
+.bottom-tools .register,
+.bottom-tools .device {
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+.bottom-tools .register {
+  display: flex;
+}
+.bottom-tools .register a {
+  flex: 1;
+  border-right: 1px solid #000;
+}
+.bottom-tools .register a:last-child {
+  border-right: none;
+}
+.bottom-tools .device {
+  display: flex;
+}
+.bottom-tools .device a {
+  flex: 1;
+}
+.bottom-tools .device a i {
+  display: block;
+  margin: 0 auto;
+  width: 33px;
+  height: 33px;
+  background: url('../images/jd-sprites.png');
+  background-size: 200px 200px;
+  background-position: -120px -70px;
+}
+.bottom-tools .device a:nth-child(2) i {
+  background-position: -40px -70px;
+}
+.bottom-tools .device a:nth-child(3) i {
+  background-position: -80px -70px;
+}
+.bottom-tools .copy-right {
+  padding: 10px 0;
+}
+/* 底部工具栏 end */
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+}
+footer a {
+  flex: 1;
+}
+footer a img {
+  width: 64px;
+  height: 50px;
+  margin: 0 auto;
+}
+body {
+  padding-bottom: 50px;
+}
